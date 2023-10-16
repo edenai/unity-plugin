@@ -27,7 +27,7 @@ The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform
 ## Installation
 To use the Unity EdenAI Plugin in your Unity project, follow these steps:
 1. Open your Unity Package Manager
-2. Add package from git url : ["www.edenai.co"]("www.edenai.co")
+2. Add package from git url : ["https://github.com/edenai/unity-plugin.git"]("https://github.com/edenai/unity-plugin.git")
 ## Getting Started
 To get started with the Unity EdenAI Plugin, you should:
 1. [Install the Plugin](#installation).
