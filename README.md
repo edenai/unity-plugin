@@ -54,7 +54,8 @@ EdenAIApi edenAI = new EdenAIApi("YOUR_EDENAI_API_KEY");
 ### Chat
 You can use the plugin to chat with natural language processing models in your Unity project.
 #### SendChatRequest
-This function is designed to send a request for chat and retrieve the generated  text.
+This function is designed to send a request for chat and retrieve the generated text.
+In case of errors, a `System.Exception` will be raised.
 #### Parameters
 * **provider** (string) : The data will be redirected to a single provider to obtain the processed results (ex : "openai").
 For a list of available providers, please refer to our [documentation](https://docs.edenai.co/reference/text_chat_create).
@@ -88,6 +89,7 @@ ChatResponse response = await edenAI.SendChatRequest(provider, text, previousHis
 ```
 ### Text to Speech
 You can use the plugin to convert text to speech in your Unity project.
+In case of errors, a `System.Exception` will be raised.
 #### SendTextToSpeechRequest
 This function is designed to send a request for text-to-speech conversion and retrieve the generated audio output.
 
@@ -144,6 +146,7 @@ Visit [YoDa on Eden AI](https://app.edenai.run/bricks/edenai-products/askyoda/de
 ![Yoda](Image/Yoda.png)
 #### SendYodaRequest
 This function is designed to send a request to interact with your data and retrieve the generated text.
+In case of errors, a `System.Exception` will be raised.
 
 <a id="parameters-2"></a>
 #### Parameters
