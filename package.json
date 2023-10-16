@@ -2,5 +2,9 @@
   "name": "co.edenai.edenai",
   "version": "1.0.0",
   "displayName": "Eden AI",
-  "description": "The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform various AI tasks such as text-to-speech conversion, chatbot interactions, and more within your Unity applications."
+  "description": "The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform various AI tasks such as text-to-speech conversion, chatbot interactions, and more within your Unity applications.",
+  "documentationUrl": "https://github.com/edenai/unity-plugin/blob/master/README.md",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "2.0.0"
+  }
 }
