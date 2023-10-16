@@ -27,7 +27,7 @@ The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform
 ## Installation
 To use the Unity EdenAI Plugin in your Unity project, follow these steps:
 1. Open your Unity Package Manager
-2. Add package from git url : ["https://github.com/edenai/unity-plugin.git"]("https://github.com/edenai/unity-plugin.git")
+2. Add package from git url : [https://github.com/edenai/unity-plugin.git](https://github.com/edenai/unity-plugin.git)
 ## Getting Started
 To get started with the Unity EdenAI Plugin, you should:
 1. [Install the Plugin](#installation).
@@ -136,7 +136,8 @@ TextToSpeechResponse response = await edenAI.SendTextToSpeechRequest(provider,
 ```
 
 ### Yoda
-You can use the plugin to interact with your data in your Unity project.
+You can use the plugin to interact with your data using [YoDa](https://app.edenai.run/bricks/edenai-products/askyoda/default)
+in your Unity project.
 #### SendYodaRequest
 This function is designed to send a request to interact with your data and retrieve the generated text.
 
