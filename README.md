@@ -18,7 +18,7 @@ The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform
       - [Parameters](#parameters-1)
       - [Return Value](#return-value-1)
       - [Example Usage](#example-usage-1)
-  - [Yoda](#yoda)
+  - [Ask your data](#ask-your-data)
     - [SendYodaRequest](#sendyodarequest)
       - [Parameters](#parameters-2)
       - [Return Value](#return-value-2)
@@ -135,9 +135,13 @@ TextToSpeechResponse response = await edenAI.SendTextToSpeechRequest(provider,
     text, audioFormat, option, language, voiceModel: voiceModel);
 ```
 
-### Yoda
+### Ask your data
 You can use the plugin to interact with your data using [YoDa](https://app.edenai.run/bricks/edenai-products/askyoda/default)
 in your Unity project.
+#### Create a YoDa project
+Visit [YoDa on Eden AI](https://app.edenai.run/bricks/edenai-products/askyoda/default) and initiate your initial project.
+
+![Yoda](Image/Yoda.png)
 #### SendYodaRequest
 This function is designed to send a request to interact with your data and retrieve the generated text.
 
