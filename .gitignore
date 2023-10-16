@@ -1,0 +1,16 @@
+# Unity specific
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Ll]ibrary
+[Pp]roj(?:ectSettings)?/
+[Bb]uilds/
+[Bb]uild/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Rider specific
+.idea/
