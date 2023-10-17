@@ -100,7 +100,7 @@ This function is designed to send a request for text-to-speech conversion and re
 * **text** (string) : The text to analyze.
 * **audioFormat** (string) : The audio format in which the audio will be generated (ex : "mp3").
 * **option** (TextToSpeechOption) : Specifies the voice for the generated speech. You can choose from the following
-options: `TextToSpeechOption.Female` or `TextToSpeechOption.Male` 
+options: `TextToSpeechOption.FEMALE` or `TextToSpeechOption.MALE` 
 * **language** (string) : The language code (ex : "en").
 For a list of available languages, please refer to our [documentation](https://docs.edenai.co/reference/audio_text_to_speech_create).
 * **rate** (int) _(optional)_ : Increase or decrease the speaking rate by expressing a positif or negatif number ranging
