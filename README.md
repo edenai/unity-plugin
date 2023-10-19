@@ -23,6 +23,15 @@ The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform
       - [Parameters](#parameters-2)
       - [Return Value](#return-value-2)
       - [Example Usage](#example-usage-2)
+  - [Translation](#translation-coming-soon)
+  - [Image Generation](#image-generation-coming-soon)
+  - [Spell Check](#spell-check-coming-soon)
+  - [Sentiment Analysis](#sentiment-analysis-coming-soon)
+  - [Summarize](#summarize-coming-soon)
+  - [Speech Analysis](#speech-analysis-coming-soon)
+  - [OCR](#ocr-coming-soon)
+  - [Explicit Content Detection](#explicit-content-detection-coming-soon)
+  - [Image Generation](#image-generation-coming-soon)
 
 ## Installation
 To use the Unity EdenAI Plugin in your Unity project, follow these steps:
@@ -175,7 +184,15 @@ string query = "Which product is the most expensive?";
 EdenAIApi edenAI = new EdenAIApi();
 YodaResponse response = await edenAI.SendYodaRequest(projectID, query);
 ```
-
+### Translation: COMING SOON
+### Image Generation: COMING SOON
+### Spell Check: COMING SOON
+### Sentiment Analysis: COMING SOON
+### Summarize: COMING SOON
+### Speech Analysis: COMING SOON
+### OCR: COMING SOON
+### Explicit Content Detection: COMING SOON
+### Image Generation: COMING SOON
 
 
 
