@@ -85,18 +85,24 @@ This function returns a `ChatResponse` object, which contains :
 #### Example Usage
 ```csharp
 using EdenAI;
-public void request()
+using System;
+using System.Threading.Tasks;
+
+class Program
 {
-  string provider = "openai";
-  string text = "Hello I'm fine and you ?";
-  ChatMessage chatMessage = new ChatMessage()
-  {
-      Role = "assistant",
-      Message = "Hello how are you ?"
-  };
-  List<ChatMessage> previousHistory = new List<ChatMessage>{ chatMessage };
-  EdenAIpi edenAI = new EdenAIApi();
-  ChatResponse response = await edenAI.SendChatRequest(provider, text, previousHistory: previousHistory);
+    static async Task Main(string[] args)
+    {
+        string provider = "openai";
+        string text = "Hello I'm fine and you ?";
+        ChatMessage chatMessage = new ChatMessage()
+        {
+            Role = "assistant",
+            Message = "Hello how are you ?"
+        };
+        List<ChatMessage> previousHistory = new List<ChatMessage>{ chatMessage };
+        EdenAIpi edenAI = new EdenAIApi();
+        ChatResponse response = await edenAI.SendChatRequest(provider, text, previousHistory: previousHistory);
+    }
 };
 ```
 ### Text to Speech
@@ -137,16 +143,25 @@ This function returns a `TextToSpeechResponse` object, which contains :
 
 ```csharp
 using EdenAI;
-string provider = "amazon";
-string text = "Hello how are you ?";
-string audioFormat = "mp3";
-TextToSpeechOption option = TextToSpeechOption.FEMALE;
-string language = "en";
-string voiceModel = "en-US_Justin_Standard";
+using System;
+using System.Threading.Tasks;
 
-EdenAIApi edenAI = new EdenAIApi();
-TextToSpeechResponse response = await edenAI.SendTextToSpeechRequest(provider,
-    text, audioFormat, option, language, voiceModel: voiceModel);
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        string provider = "amazon";
+        string text = "Hello how are you ?";
+        string audioFormat = "mp3";
+        TextToSpeechOption option = TextToSpeechOption.FEMALE;
+        string language = "en";
+        string voiceModel = "en-US_Justin_Standard";
+
+        EdenAIApi edenAI = new EdenAIApi();
+        TextToSpeechResponse response = await edenAI.SendTextToSpeechRequest(provider,
+            text, audioFormat, option, language, voiceModel: voiceModel);
+    }
+}
 ```
 
 ### Ask your data
@@ -180,11 +195,20 @@ This function returns a `YodaResponse` object, which contains :
 #### Example Usage
 ```csharp
 using EdenAI;
-string projectID = "YOUR_YODA_PROJECT_ID";
-string query = "Which product is the most expensive?";
+using System;
+using System.Threading.Tasks;
 
-EdenAIApi edenAI = new EdenAIApi();
-YodaResponse response = await edenAI.SendYodaRequest(projectID, query);
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        string projectID = "YOUR_YODA_PROJECT_ID";
+        string query = "Which product is the most expensive?";
+
+        EdenAIApi edenAI = new EdenAIApi();
+        YodaResponse response = await edenAI.SendYodaRequest(projectID, query);
+    }
+}
 ```
 ### Translation: COMING SOON
 ### Image Generation: COMING SOON
