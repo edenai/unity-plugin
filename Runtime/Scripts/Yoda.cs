@@ -10,13 +10,13 @@ namespace EdenAI
     }
     public class YodaRequest
     {
-        public List<ChatMessage> history { get; set; }
+        public List<Dictionary<string, string>> history { get; set; }
         public int? k { get; set; }
         public string llm_model { get; set; }
         public string llm_provider { get; set; }
         public string query { get; set; }
         
-        public YodaRequest(string query, List<ChatMessage> history = null, int? k = null, string llmModel = null,
+        public YodaRequest(string query, List<Dictionary<string, string>> history = null, int? k = null, string llmModel = null,
             string llmProvider = null)
         {
             this.query = query;

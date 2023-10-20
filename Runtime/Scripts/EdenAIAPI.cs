@@ -154,10 +154,11 @@ namespace EdenAI
 				ChatResponse[] obj = JsonConvert.DeserializeObject<ChatResponse[]>(responseText);
 				return obj[0];
 			}
-			Debug.LogError(request.error);
-			throw new Exception(request.error);
+			//Debug.LogError(request.error);
+			Debug.LogError(request.downloadHandler.text);
+			throw new Exception(request.downloadHandler.text);
         }
-		public async Task<YodaResponse> SendYodaRequest(string projectID, string query, List<ChatMessage> history = null,
+		public async Task<YodaResponse> SendYodaRequest(string projectID, string query, List<Dictionary<string,string>> history = null,
 			int? k = null, string llmModel = null, string llmProvider = null)
 		{
 			string url = "https://api.edenai.run/v2/aiproducts/askyoda/" + projectID + "/ask_llm";
@@ -190,6 +191,7 @@ namespace EdenAI
 				return obj;
 			}
 			Debug.LogError(request.error);
+			Debug.LogError(request.downloadHandler.text);
 			throw new Exception(request.error);
 		}
 
