@@ -85,16 +85,19 @@ This function returns a `ChatResponse` object, which contains :
 #### Example Usage
 ```csharp
 using EdenAI;
-string provider = "openai";
-string text = "Hello I'm fine and you ?";
-ChatMessage chatMessage = new ChatMessage()
+public void request()
 {
-    Role = "assistant",
-    Message = "Hello how are you ?"
+  string provider = "openai";
+  string text = "Hello I'm fine and you ?";
+  ChatMessage chatMessage = new ChatMessage()
+  {
+      Role = "assistant",
+      Message = "Hello how are you ?"
+  };
+  List<ChatMessage> previousHistory = new List<ChatMessage>{ chatMessage };
+  EdenAIpi edenAI = new EdenAIApi();
+  ChatResponse response = await edenAI.SendChatRequest(provider, text, previousHistory: previousHistory);
 };
-List<ChatMessage> previousHistory = new List<ChatMessage>{ chatMessage };
-EdenAIpi edenAI = new EdenAIApi();
-ChatResponse response = await edenAI.SendChatRequest(provider, text, previousHistory: previousHistory);
 ```
 ### Text to Speech
 You can use the plugin to convert text to speech in your Unity project.
@@ -147,9 +150,9 @@ TextToSpeechResponse response = await edenAI.SendTextToSpeechRequest(provider,
 ```
 
 ### Ask your data
-You can use the plugin to interact with your data using [YoDa](https://app.edenai.run/bricks/edenai-products/askyoda/default)
+You can use the plugin to interact with your data using [AskYoDa](https://app.edenai.run/bricks/edenai-products/askyoda/default)
 in your Unity project.
-#### Create a YoDa project
+#### Create a AskYoDa project
 Visit [YoDa on Eden AI](https://app.edenai.run/bricks/edenai-products/askyoda/default) and initiate your initial project.
 
 ![Yoda](Image/Yoda.png)
@@ -161,9 +164,8 @@ In case of errors, a `System.Exception` will be raised.
 #### Parameters
 * **projectID** (string) : The ID your YoDa project. 
 * **query** (string) : The question or query about the data.
-* **history** (List<ChatMessage>) _(optional)_ :  A list containing all the previous conversations between the user and the chatbot AI.
-  Each item in the list should be a ChatMessage object, which contains **Role** (`user` or `assistant`) and **Message**
-(the text of the conversions from the respective role). For example : new List<ChatMessage>(new ChatMessage() { Role = "assistant", Message = "Hi, how can I help You ?"}).
+* **history** (List<Dictionary<string, string>>) _(optional)_ :  A list containing all the previous conversations between the user and the chatbot AI.
+Each dictionary item in the list should contain alternating "user" and "assistant" messages, with their associated roles and text. For example : new List<Dictionary<string, string>>{new Dictionary<string, string> { { "user", "Hi!" }, { "assistant", "Hi, how can I help you?" }}};.
 * **k** (int) _(optional)_ : The number of result chunk to return.
 * **llmModel** (string) _(optional)_ : The model to use for language processing.
 * **llmProvider** (string) _(optional)_ : The provider for the large language model (LLM) for processing.
