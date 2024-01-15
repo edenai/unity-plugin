@@ -1,6 +1,6 @@
-# Unity EdenAI Plugin
+# Unity Eden AI Plugin
 
-The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform various AI tasks such as text-to-speech conversion, chatbot interactions, and more within your Unity applications.
+The Unity Eden AI Plugin provides easy integration with the Eden AI API to perform various AI tasks such as text-to-speech conversion, chatbot interactions, and more within your Unity applications.
 
 **Table of Contents**
 
@@ -34,13 +34,13 @@ The Unity EdenAI Plugin provides easy integration with the EdenAI API to perform
   - [Image Generation](#image-generation-coming-soon)
 
 ## Installation
-To use the Unity EdenAI Plugin in your Unity project, follow these steps:
+To use the Unity Eden AI Plugin in your Unity project, follow these steps:
 1. Open your Unity Package Manager
 2. Add package from git url : [https://github.com/edenai/unity-plugin.git](https://github.com/edenai/unity-plugin.git)
 ## Getting Started
 To get started with the Unity EdenAI Plugin, you should:
 1. [Install the Plugin](#installation).
-2. [Obtain an EdenAI API Key](https://app.edenai.run/bricks/default) if you haven't already.
+2. [Obtain an Eden AI API Key](https://app.edenai.run/user/register?referral=github-unity) if you haven't already.
 3. You need to provide your EdenAI API Key to use this plugin. You can set it in your script or
 add a file `auth.json` to your user folder (path: `~/.edenai` (Linux/Mac) or `%USERPROFILE%/.edenai/` (Windows))
 as follows:
@@ -52,7 +52,7 @@ as follows:
 4. Follow the [usage](#usage) instructions provided below.
 
 ## Usage
-### Initialize the EdenAI API
+### Initialize the Eden AI API
 You can create an instance of the `EdenAIApi` class by passing your API key as a parameter.
 If the API key is not provided, it will attempt to read it from the auth.json file in your user folder.
 ```csharp
@@ -76,7 +76,7 @@ Each item in the list should be a ChatMessage object, which contains **Role** (`
 
 #### Return Value
 This function returns a `ChatResponse` object, which contains :
-* **status** (string) : `fail` or `sucess`
+* **status** (string) : `fail` or `success`
 * **provider** (string) : The provider used to process the data.
 * **generated_text** (string) :  The generated text by the chatbot AI.
 * **message** (List<ChatMessage>) : The messages between the `user` and the `assistant`.
@@ -132,7 +132,7 @@ ranging between 100 and -100 (a relative value as percentage varying from -100% 
 <a id="return-value-1"></a>
 #### Return Value
 This function returns a `TextToSpeechResponse` object, which contains :
-* **status** (string) : `fail` or `sucess`
+* **status** (string) : `fail` or `success`
 * **provider** (string) : The provider used to process the data.
 * **cost** (double) : The cost of the api call.
 * **audio** (AudioClip) : The audio generated.
@@ -165,10 +165,10 @@ class Program
 ```
 
 ### Ask your data
-You can use the plugin to interact with your data using [AskYoDa](https://app.edenai.run/bricks/edenai-products/askyoda/default)
+You can use the plugin to interact with your data using [AskYoda](https://app.edenai.run/bricks/edenai-products/askyoda/default)
 in your Unity project.
-#### Create a AskYoDa project
-Visit [YoDa on Eden AI](https://app.edenai.run/bricks/edenai-products/askyoda/default) and initiate your initial project.
+#### Create a AskYoda project
+Visit [Yoda on Eden AI](https://app.edenai.run/bricks/edenai-products/askyoda/default) and initiate your initial project.
 
 ![Yoda](Image/Yoda.png)
 #### SendYodaRequest
@@ -177,7 +177,7 @@ In case of errors, a `System.Exception` will be raised.
 
 <a id="parameters-2"></a>
 #### Parameters
-* **projectID** (string) : The ID your YoDa project. 
+* **projectID** (string) : The ID your AskYoda project. 
 * **query** (string) : The question or query about the data.
 * **history** (List<Dictionary<string, string>>) _(optional)_ :  A list containing all the previous conversations between the user and the chatbot AI.
 Each dictionary item in the list should contain alternating "user" and "assistant" messages, with their associated roles and text. For example : new List<Dictionary<string, string>>{new Dictionary<string, string> { { "user", "Hi!" }, { "assistant", "Hi, how can I help you?" }}};.
